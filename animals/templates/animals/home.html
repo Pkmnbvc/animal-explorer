@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animal Explorer</title>
+</head>
+
+<body>
+
+    <h1>🐾 Animal Explorer 🐾</h1>
+    <h2>What do you want to explore?</h2>
+
+    <a href="{% url 'animal_category' 'Mammal' %}">🐘 Mammals</a>
+
+    <a href="{% url 'animal_category' 'Bird' %}">🐧Birds</a>
+
+    <a href="{% url 'animal_category' 'Reptile' %}">🐊 Reptiles</a>
+
+    <a href="{% url 'animal_category' 'Amphibian' %}">🐸 Amphibians</a>
+
+    <a href="{% url 'animal_category' 'Fish' %}">🐠 Fish</a>
+
+    <a href="{% url 'animal_category' 'Arthropod' %}">🦋 Arthropods</a>
+
+    <a href="{% url 'animal_category' 'Other Invertebrate' %}">🪼 Other Animals</a>
+
+</body>
+</html>
