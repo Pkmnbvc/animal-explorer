@@ -9,6 +9,12 @@
 
     <p><em>{{ animal.scientific_name }}</em></p>
 
+    {% if animal.image %}
+        <img src="{{ animal.image.url }}" alt="{{ animal.name }}">
+    {% endif %}
+
+
+
     <p><strong>Diet:</strong> {{ animal.diet }}</p>
 
     <p><strong>Habitat:</strong> {{ animal.habitat }}</p>
