@@ -20,3 +20,19 @@ def animal_category(request, category):
         {'animals': animals, 'category': category}
     )
 
+def search_animals(request):
+    query = request.GET.get('q', '')
+
+    if query:
+        animals = Animal.objects.filter(name__icontains=query)
+    else:
+        animals = Animal.objects.none()
+
+    return render(
+        request,
+        'animals/search_results.html',
+        {
+            'animals': animals,
+            'query': query,
+        }
+    )

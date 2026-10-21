@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Animal Explorer{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'animals/css/style.css' %}">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="navbar">
+
+            <a class="brand" href="/animals/">
+                <span class="brand-paw">🐾</span>
+                <span class="brand-animal">Animal</span>
+                <span class="brand-explorer">Explorer</span>
+            </a>
+
+<div class="nav-links">
+    <a href="/animals/">Home</a>
+    <a href="/animals/#categories">Categories</a>
+    <a href="/animals/#about">About</a>
+</div>
+<form class="search-box"
+      method="get"
+      action="{% url 'search_animals' %}">
+
+    <input
+        type="text"
+        name="q"
+        placeholder="Search animals..."
+        aria-label="Search animals"
+    >
+
+    <button type="submit" class="search-button">
+        🔍
+    </button>
+
+</form>
+
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>

@@ -1,28 +1,101 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{{ animal.name }} | Animal Explorer</title>
-</head>
-<body>
+{% extends 'animals/base.html' %}
 
-    <h1>{{ animal.name }}</h1>
+{% block title %}{{ animal.name }} Passport | Animal Explorer{% endblock %}
 
-    <p><em>{{ animal.scientific_name }}</em></p>
+{% block content %}
 
-    {% if animal.image %}
-        <img src="{{ animal.image.url }}" alt="{{ animal.name }}">
-    {% endif %}
+<section class="passport-page">
+
+    <a class="passport-back"
+       href="{% url 'animal_category' animal.category %}">
+        ← Back to {{ animal.category }}s
+    </a>
+
+    <article class="animal-passport">
+
+        <div class="passport-header">
+            <div>
+                <span class="passport-brand">🐾 Animal Explorer</span>
+                <h1>{{ animal.name }} Passport</h1>
+            </div>
+
+            <span class="passport-stamp">
+                EXPLORE!
+            </span>
+        </div>
 
 
+        <div class="passport-body">
 
-    <p><strong>Diet:</strong> {{ animal.diet }}</p>
+            <div class="passport-photo-area">
 
-    <p><strong>Habitat:</strong> {{ animal.habitat }}</p>
+                {% if animal.image %}
+                    <img
+                        class="passport-photo"
+                        src="{{ animal.image.url }}"
+                        alt="{{ animal.name }}"
+                    >
+                {% else %}
+                    <div class="passport-photo-placeholder">
+                        🐾
+                        <span>Photo coming soon!</span>
+                    </div>
+                {% endif %}
 
-    <p><strong>Lifespan:</strong> {{ animal.lifespan }}</p>
+                <div class="passport-name">
+                    <h2>{{ animal.name }}</h2>
+                    <p><em>{{ animal.scientific_name }}</em></p>
+                </div>
 
-    <h2>Fun Fact!</h2>
-    <p>{{ animal.fun_fact }}</p>
+            </div>
 
-</body>
-</html>
+
+            <div class="passport-details">
+
+                <div class="passport-fact">
+                    <span class="fact-icon">🐾</span>
+                    <div>
+                        <span class="fact-label">Category</span>
+                        <strong>{{ animal.category }}</strong>
+                    </div>
+                </div>
+
+                <div class="passport-fact">
+                    <span class="fact-icon">🍴</span>
+                    <div>
+                        <span class="fact-label">Diet</span>
+                        <strong>{{ animal.diet }}</strong>
+                    </div>
+                </div>
+
+                <div class="passport-fact">
+                    <span class="fact-icon">🌿</span>
+                    <div>
+                        <span class="fact-label">Habitat</span>
+                        <strong>{{ animal.habitat }}</strong>
+                    </div>
+                </div>
+
+                <div class="passport-fact">
+                    <span class="fact-icon">⏳</span>
+                    <div>
+                        <span class="fact-label">Lifespan</span>
+                        <strong>{{ animal.lifespan }}</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="passport-fun-fact">
+            <span class="fun-fact-title">⭐ Fun Fact!</span>
+            <p>{{ animal.fun_fact }}</p>
+        </div>
+
+    </article>
+
+</section>
+
+{% endblock %}

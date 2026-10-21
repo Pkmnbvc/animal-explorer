@@ -1,21 +1,113 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{{ category }} | Animal Explorer</title>
-</head>
-<body>
+{% extends 'animals/base.html' %}
+{% load static %}
 
-    <h1>{{ category }}</h1>
+{% block title %}{{ category }} | Animal Explorer{% endblock %}
 
-    {% for animal in animals %}
-        <h2>
-            <a href="{% url 'animal_detail' animal.id %}">
-                {{ animal.name }}
+{% block content %}
+
+<section class="category-page">
+
+    <div class="category-hero category-{{ category|lower }}">
+
+        <div class="category-mascot">
+
+            {% if category == 'Mammal' %}
+                <img src="{% static 'animals/images/mascots/katie-joey.png' %}"
+                     alt="Katie and Joey">
+
+            {% elif category == 'Bird' %}
+                <img src="{% static 'animals/images/mascots/philippe.png' %}"
+                     alt="Philippe">
+
+            {% elif category == 'Reptile' %}
+                <img src="{% static 'animals/images/mascots/mushu.png' %}"
+                     alt="Mushu">
+
+            {% elif category == 'Amphibian' %}
+                <img src="{% static 'animals/images/mascots/lilypad.png' %}"
+                     alt="Lilypad">
+
+            {% elif category == 'Fish' %}
+                <img src="{% static 'animals/images/mascots/cora.png' %}"
+                     alt="Cora">
+
+            {% elif category == 'Arthropod' %}
+                <img src="{% static 'animals/images/mascots/sheldon.png' %}"
+                     alt="Sheldon">
+            {% endif %}
+
+        </div>
+
+
+        <div class="category-hero-text">
+
+            {% if category == 'Mammal' %}
+                <h1>Mammals</h1>
+                <p>Warm-blooded animals with fur or hair.</p>
+
+            {% elif category == 'Bird' %}
+                <h1>Birds</h1>
+                <p>Feathered animals that can fly, swim, or both!</p>
+
+            {% elif category == 'Reptile' %}
+                <h1>Reptiles</h1>
+                <p>Cold-blooded animals with scales.</p>
+
+            {% elif category == 'Amphibian' %}
+                <h1>Amphibians</h1>
+                <p>Animals that live on land and in water.</p>
+
+            {% elif category == 'Fish' %}
+                <h1>Fish</h1>
+                <p>Animals that live and explore underwater.</p>
+
+            {% elif category == 'Arthropod' %}
+                <h1>Arthropods</h1>
+                <p>Insects, spiders, crustaceans, and other amazing invertebrates.</p>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+
+    <div class="animal-gallery">
+
+        {% for animal in animals %}
+
+            <a class="animal-card"
+               href="{% url 'animal_detail' animal.id %}">
+
+                {% if animal.image %}
+                    <img
+                        src="{{ animal.image.url }}"
+                        alt="{{ animal.name }}"
+                    >
+                {% else %}
+                    <div class="animal-card-placeholder">
+                        🐾
+                    </div>
+                {% endif %}
+
+                <div class="animal-card-info">
+                    <h2>{{ animal.name }}</h2>
+                    <p><em>{{ animal.scientific_name }}</em></p>
+
+                    <span class="animal-card-arrow">→</span>
+                </div>
+
             </a>
-        </h2>
 
-        <p><em>{{ animal.scientific_name }}</em></p>
-    {% endfor %}
+        {% empty %}
 
-</body>
-</html>
+            <p class="empty-category">
+                More animals are coming soon!
+            </p>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}
