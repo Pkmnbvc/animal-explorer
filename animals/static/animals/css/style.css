@@ -6,9 +6,9 @@
 
 body {
     margin: 0;
-    background-color: #fff7dc;
+    background-color: #fff7dc; /* Base tan background for search & other pages */
     font-family: "Trebuchet MS", Arial, sans-serif;
-    color: #17351f;
+    color: #fff7dc
 }
 
 a {
@@ -24,24 +24,25 @@ a {
 }
 
 .navbar {
+    position: absolute;
+    top: 12px;                  /* Shifted higher towards the top edge */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+
+    width: calc(100% - 40px);
     max-width: 1200px;
-    margin: 0 auto;
+    
+    /* Reduced top and bottom padding to make it skinner */
+    padding: 6px 20px;          
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+    justify-content: space-between; /* Keeps logo left, links center, search right */
 
-    background: #fffdf5;
-
-    padding: 12px 20px;
-
-    border-radius: 24px;
-
-    box-shadow:
-        0 4px 12px rgba(58, 76, 45, 0.12);
-
-    border: 2px solid rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 40px;        /* Smooth pill shape */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 /* Logo */
@@ -125,33 +126,25 @@ a {
     color: #155c32;
 }
 
-/* ---------- Homepage Hero ---------- */
+
 
 /* ---------- Animal Explorer Homepage ---------- */
 
 .explorer-world {
     position: relative;
-    overflow: hidden;
-
     width: 100%;
-    min-height: calc(100vh - 110px);
-
-    margin: 18px 0 0;
-    border-radius: 0;
-
-    background-image:
+    min-height: 100vh;
+    margin: 0;
+    
+    background-image: 
         linear-gradient(
             rgba(255, 255, 255, 0.05),
             rgba(255, 255, 255, 0.05)
         ),
         url("../images/backgrounds/home-bg.png");
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-    box-shadow: none;
-    border: none;
 }
 /* ---------- Hero ---------- */
 
@@ -966,8 +959,10 @@ a {
 /* ---------- Category mascot sizing ---------- */
 
 .category-mammal .category-mascot img {
-    height: 315px;
+    height: 360px;
+    width: auto;
     max-height: none;
+    max-width: none;
 }
 
 .category-bird .category-mascot img {
@@ -996,10 +991,10 @@ a {
 }
 
 .category-mammal .category-mascot {
-    left: 30px;
-    bottom: -35px;
+    left: 20px;
+    bottom: -55px;
+    width: 46%;
 }
-
 .category-bird .category-mascot {
     left: 35px;
     bottom: -30px;
@@ -1024,3 +1019,4 @@ a {
     left: 25px;
     bottom: -35px;
 }
+
