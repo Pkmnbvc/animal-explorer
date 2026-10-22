@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-*%wtsja%=2e-*4v))h=w7)+h8^!0!#ii6nha$iud_4*^6j7nq8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['54.167.79.5']
+ALLOWED_HOSTS = ['54.167.79.5', '127.0.0.1', '34.229.140.24']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hello_world_app',
+    'animals',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Media files uploaded by users/admin
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+

@@ -1,0 +1,153 @@
+{% extends 'animals/base.html' %}
+{% load static %}
+
+{% block title %}Animal Explorer{% endblock %}
+
+{% block content %}
+
+<section class="explorer-world">
+
+    <div class="world-hero">
+        <h1 class="hero-title">
+            <span class="hero-animal">Animal</span>
+            <span class="hero-explorer">Explorer</span>
+        </h1>
+
+        <h2 class="hero-tagline">
+            Discover. Learn. Explore.
+        </h2>
+
+        <p class="hero-description">
+            Choose a category to meet amazing animals
+            <br>
+            from around the world!
+        </p>
+    </div>
+
+
+<div id="categories" class="category-grid">
+
+    <a class="category-card mammals-card"
+       href="{% url 'animal_category' 'Mammal' %}">
+
+        <div class="card-scene">
+            <img class="card-background"
+                 src="{% static 'animals/images/card-bgs/mammals-bg.png' %}"
+                 alt="">
+
+            <img class="mascot mascot-katie"
+                 src="{% static 'animals/images/mascots/katie-joey.png' %}"
+                 alt="Katie and Joey">
+        </div>
+
+        <div class="card-label">
+            <h3>Mammals</h3>
+            <p>Katie &amp; Joey</p>
+        </div>
+    </a>
+
+
+    <a class="category-card birds-card"
+       href="{% url 'animal_category' 'Bird' %}">
+
+        <div class="card-scene">
+            <img class="card-background"
+                 src="{% static 'animals/images/card-bgs/birds-bg.png' %}"
+                 alt="">
+
+            <img class="mascot mascot-philippe"
+                 src="{% static 'animals/images/mascots/philippe.png' %}"
+                 alt="Philippe">
+        </div>
+
+        <div class="card-label">
+            <h3>Birds</h3>
+            <p>Philippe</p>
+        </div>
+    </a>
+
+
+    <a class="category-card reptiles-card"
+       href="{% url 'animal_category' 'Reptile' %}">
+
+        <div class="card-scene">
+            <img class="card-background"
+                 src="{% static 'animals/images/card-bgs/reptiles-bg.png' %}"
+                 alt="">
+
+            <img class="mascot mascot-mushu"
+                 src="{% static 'animals/images/mascots/mushu.png' %}"
+                 alt="Mushu">
+        </div>
+
+        <div class="card-label">
+            <h3>Reptiles</h3>
+            <p>Mushu</p>
+        </div>
+    </a>
+
+
+    <a class="category-card amphibians-card"
+       href="{% url 'animal_category' 'Amphibian' %}">
+
+        <div class="card-scene">
+            <img class="card-background"
+                 src="{% static 'animals/images/card-bgs/amphibians-bg.png' %}"
+                 alt="">
+
+            <img class="mascot mascot-lilypad"
+                 src="{% static 'animals/images/mascots/lilypad.png' %}"
+                 alt="Lilypad">
+        </div>
+
+        <div class="card-label">
+            <h3>Amphibians</h3>
+            <p>Lilypad</p>
+        </div>
+    </a>
+
+
+    <a class="category-card fish-card"
+       href="{% url 'animal_category' 'Fish' %}">
+
+        <div class="card-scene">
+            <img class="card-background"
+                 src="{% static 'animals/images/card-bgs/fish-bg.png' %}"
+                 alt="">
+
+            <img class="mascot mascot-cora"
+                 src="{% static 'animals/images/mascots/cora.png' %}"
+                 alt="Cora">
+        </div>
+
+        <div class="card-label">
+            <h3>Fish</h3>
+            <p>Cora</p>
+        </div>
+    </a>
+
+
+    <a class="category-card arthropods-card"
+       href="{% url 'animal_category' 'Arthropod' %}">
+
+        <div class="card-scene">
+            <img class="card-background"
+                 src="{% static 'animals/images/card-bgs/arthropods-bg.png' %}"
+                 alt="">
+
+            <img class="mascot mascot-sheldon"
+                 src="{% static 'animals/images/mascots/sheldon.png' %}"
+                 alt="Sheldon">
+        </div>
+
+        <div class="card-label">
+            <h3>Arthropods</h3>
+            <p>Sheldon</p>
+        </div>
+    </a>
+
+</div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'animals/base.html' %}
+{% load static %}
+
+{% block title %}{{ mascot.name }} | Animal Explorer{% endblock %}
+
+{% block content %}
+
+<section
+    class="mascot-profile-page"
+    {% if mascot.background %}
+        style="background-image: url('{% static mascot.background %}');"
+    {% endif %}
+>
+
+    <a
+        class="mascot-category-button"
+        href="{% url 'animal_category' mascot.category %}">
+        ← Go to {{ mascot.category_label }}
+    </a>
+
+    <div class="mascot-profile-card">
+        <img
+            src="{% static mascot.image %}"
+            alt="{{ mascot.name }} profile"
+        >
+    </div>
+
+</section>
+
+{% endblock %}

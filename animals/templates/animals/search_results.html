@@ -1,0 +1,48 @@
+{% extends 'animals/base.html' %}
+
+{% block title %}Search | Animal Explorer{% endblock %}
+
+{% block content %}
+
+<section class="search-results-page">
+
+    <h1>Search Results</h1>
+
+    {% if query %}
+        <p class="search-query">
+            Showing results for "<strong>{{ query }}</strong>"
+        </p>
+    {% endif %}
+
+    {% if animals %}
+
+        <div class="search-results-grid">
+
+            {% for animal in animals %}
+                <a class="search-result-card"
+                   href="{% url 'animal_detail' animal.id %}">
+
+                    <h2>{{ animal.name }}</h2>
+
+                    <p>
+                        <em>{{ animal.scientific_name }}</em>
+                    </p>
+
+                    <p>{{ animal.category }}</p>
+
+                </a>
+            {% endfor %}
+
+        </div>
+
+    {% else %}
+
+        <p class="no-results">
+            No animals found.
+        </p>
+
+    {% endif %}
+
+</section>
+
+{% endblock %}
