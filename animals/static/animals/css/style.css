@@ -335,7 +335,7 @@ a {
 /* Sheldon */
 
 .mascot-sheldon {
-    width: 76%;
+    width: 86%;
 
     left: 52%;
     bottom: 78px;
@@ -547,11 +547,10 @@ a {
 
 .passport-photo {
     display: block;
-
     width: 100%;
-    height: 300px;
-
-    object-fit: cover;
+    height: auto;
+    max-height: 360px;
+    object-fit: contain;
     object-position: center;
 }
 
