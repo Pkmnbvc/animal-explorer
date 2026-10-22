@@ -1,152 +1,204 @@
 {% extends 'animals/base.html' %}
 {% load static %}
 
-{% block title %}Animal Explorer{% endblock %}
+{% block title %}Meet the Team | Animal Explorer{% endblock %}
 
 {% block content %}
 
-<section class="explorer-world">
+<section class="team-home">
 
-    <div class="world-hero">
-        <h1 class="hero-title">
-            <span class="hero-animal">Animal</span>
-            <span class="hero-explorer">Explorer</span>
-        </h1>
+    <div id="about" class="team-hero">
+        <p class="team-eyebrow">🐾 YOUR ANIMAL GUIDES</p>
 
-        <h2 class="hero-tagline">
-            Discover. Learn. Explore.
-        </h2>
+        <h1>Meet the Animal Explorer Team!</h1>
 
-        <p class="hero-description">
-            Choose a category to meet amazing animals
-            <br>
-            from around the world!
+        <p class="team-intro">
+            Six curious explorers. Six amazing animal worlds.
+            Pick a teammate and discover what makes their animal group special!
         </p>
+
+        <a class="browse-categories-link" href="{% url 'categories' %}">
+            Explore all animal categories →
+        </a>
     </div>
 
 
-<div id="categories" class="category-grid">
+    <div class="team-grid">
 
-    <a class="category-card mammals-card"
-       href="{% url 'animal_category' 'Mammal' %}">
+        <!-- Katie & Joey -->
+        <a class="team-card team-mammals"
+           href="{% url 'mascot_profile' 'katie-joey' %}">
 
-        <div class="card-scene">
-            <img class="card-background"
-                 src="{% static 'animals/images/card-bgs/mammals-bg.png' %}"
-                 alt="">
+            <div class="team-card-copy">
+                <span class="team-category">🐾 Mammal Guides</span>
 
-            <img class="mascot mascot-katie"
-                 src="{% static 'animals/images/mascots/katie-joey.png' %}"
-                 alt="Katie and Joey">
-        </div>
+                <h2>Katie &amp; Joey</h2>
 
-        <div class="card-label">
-            <h3>Mammals</h3>
-            <p>Katie &amp; Joey</p>
-        </div>
-    </a>
+                <p>
+                    Brave, kind, and always ready to hop into a new adventure together.
+                </p>
 
+                <div class="team-traits">
+                    <span>🧭 Adventurous</span>
+                    <span>💛 Kind</span>
+                    <span>🤝 Teamwork</span>
+                </div>
 
-    <a class="category-card birds-card"
-       href="{% url 'animal_category' 'Bird' %}">
+                <strong>Meet Katie &amp; Joey →</strong>
+            </div>
 
-        <div class="card-scene">
-            <img class="card-background"
-                 src="{% static 'animals/images/card-bgs/birds-bg.png' %}"
-                 alt="">
-
-            <img class="mascot mascot-philippe"
-                 src="{% static 'animals/images/mascots/philippe.png' %}"
-                 alt="Philippe">
-        </div>
-
-        <div class="card-label">
-            <h3>Birds</h3>
-            <p>Philippe</p>
-        </div>
-    </a>
+            <img
+                src="{% static 'animals/images/mascots/katie-joey.png' %}"
+                alt="Katie and Joey"
+            >
+        </a>
 
 
-    <a class="category-card reptiles-card"
-       href="{% url 'animal_category' 'Reptile' %}">
+        <!-- Philippe -->
+        <a class="team-card team-birds"
+           href="{% url 'mascot_profile' 'philippe' %}">
 
-        <div class="card-scene">
-            <img class="card-background"
-                 src="{% static 'animals/images/card-bgs/reptiles-bg.png' %}"
-                 alt="">
+            <div class="team-card-copy">
+                <span class="team-category">🪶 Bird Guide</span>
 
-            <img class="mascot mascot-mushu"
-                 src="{% static 'animals/images/mascots/mushu.png' %}"
-                 alt="Mushu">
-        </div>
+                <h2>Philippe</h2>
 
-        <div class="card-label">
-            <h3>Reptiles</h3>
-            <p>Mushu</p>
-        </div>
-    </a>
+                <p>
+                    Polite, observant, and always noticing the little things around him.
+                </p>
 
+                <div class="team-traits">
+                    <span>🔎 Observant</span>
+                    <span>🎀 Polite</span>
+                    <span>⏰ Punctual</span>
+                </div>
 
-    <a class="category-card amphibians-card"
-       href="{% url 'animal_category' 'Amphibian' %}">
+                <strong>Meet Philippe →</strong>
+            </div>
 
-        <div class="card-scene">
-            <img class="card-background"
-                 src="{% static 'animals/images/card-bgs/amphibians-bg.png' %}"
-                 alt="">
-
-            <img class="mascot mascot-lilypad"
-                 src="{% static 'animals/images/mascots/lilypad.png' %}"
-                 alt="Lilypad">
-        </div>
-
-        <div class="card-label">
-            <h3>Amphibians</h3>
-            <p>Lilypad</p>
-        </div>
-    </a>
+            <img
+                src="{% static 'animals/images/mascots/philippe.png' %}"
+                alt="Philippe"
+            >
+        </a>
 
 
-    <a class="category-card fish-card"
-       href="{% url 'animal_category' 'Fish' %}">
+        <!-- Mushu -->
+        <a class="team-card team-reptiles"
+           href="{% url 'mascot_profile' 'mushu' %}">
 
-        <div class="card-scene">
-            <img class="card-background"
-                 src="{% static 'animals/images/card-bgs/fish-bg.png' %}"
-                 alt="">
+            <div class="team-card-copy">
+                <span class="team-category">🌿 Reptile Guide</span>
 
-            <img class="mascot mascot-cora"
-                 src="{% static 'animals/images/mascots/cora.png' %}"
-                 alt="Cora">
-        </div>
+                <h2>Mushu</h2>
 
-        <div class="card-label">
-            <h3>Fish</h3>
-            <p>Cora</p>
-        </div>
-    </a>
+                <p>
+                    Curious, calm, and happiest exploring wild paths and sunny places.
+                </p>
+
+                <div class="team-traits">
+                    <span>☀️ Outdoorsy</span>
+                    <span>🔍 Curious</span>
+                    <span>🌱 Hyper</span>
+                </div>
+
+                <strong>Meet Mushu →</strong>
+            </div>
+
+            <img
+                src="{% static 'animals/images/mascots/mushu.png' %}"
+                alt="Mushu"
+            >
+        </a>
 
 
-    <a class="category-card arthropods-card"
-       href="{% url 'animal_category' 'Arthropod' %}">
+        <!-- Lilypad -->
+        <a class="team-card team-amphibians"
+           href="{% url 'mascot_profile' 'lilypad' %}">
 
-        <div class="card-scene">
-            <img class="card-background"
-                 src="{% static 'animals/images/card-bgs/arthropods-bg.png' %}"
-                 alt="">
+            <div class="team-card-copy">
+                <span class="team-category">🌸 Amphibian Guide</span>
 
-            <img class="mascot mascot-sheldon"
-                 src="{% static 'animals/images/mascots/sheldon.png' %}"
-                 alt="Sheldon">
-        </div>
+                <h2>Lilypad</h2>
 
-        <div class="card-label">
-            <h3>Arthropods</h3>
-            <p>Sheldon</p>
-        </div>
-    </a>
+                <p>
+                    Sweet, curious, and always searching for nature's little wonders.
+                </p>
 
-</div>
+                <div class="team-traits">
+                    <span>💗 Sweet</span>
+                    <span>🔎 Curious</span>
+                    <span>🌷 Nature Lover</span>
+                </div>
+
+                <strong>Meet Lilypad →</strong>
+            </div>
+
+            <img
+                src="{% static 'animals/images/mascots/lilypad.png' %}"
+                alt="Lilypad"
+            >
+        </a>
+
+
+        <!-- Cora -->
+        <a class="team-card team-fish"
+           href="{% url 'mascot_profile' 'cora' %}">
+
+            <div class="team-card-copy">
+                <span class="team-category">🌊 Fish Guide</span>
+
+                <h2>Cora</h2>
+
+                <p>
+                    Dreamy, playful, and happiest gliding through beautiful underwater worlds.
+                </p>
+
+                <div class="team-traits">
+                    <span>✨ Dreamy</span>
+                    <span>🌊 Playful</span>
+                    <span>🐚 Gentle</span>
+                </div>
+
+                <strong>Meet Cora →</strong>
+            </div>
+
+            <img
+                src="{% static 'animals/images/mascots/cora.png' %}"
+                alt="Cora"
+            >
+        </a>
+
+
+        <!-- Sheldon -->
+        <a class="team-card team-arthropods"
+           href="{% url 'mascot_profile' 'sheldon' %}">
+
+            <div class="team-card-copy">
+                <span class="team-category">🪸 Arthropod Guide</span>
+
+                <h2>Sheldon</h2>
+
+                <p>
+                    Small, brave, cheerful, and always just happy to be part of the team.
+                </p>
+
+                <div class="team-traits">
+                    <span>⭐ Brave</span>
+                    <span>💖 Cheerful</span>
+                    <span>🤲 Helpful</span>
+                </div>
+
+                <strong>Meet Sheldon →</strong>
+            </div>
+
+            <img
+                src="{% static 'animals/images/mascots/sheldon.png' %}"
+                alt="Sheldon"
+            >
+        </a>
+
+    </div>
 
 </section>
 

@@ -7,7 +7,7 @@
 body {
     margin: 0;
     background-color: #fff7dc; /* Base tan background for search & other pages */
-    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-family: 'Fredoka', 'Arial Rounded MT Bold', sans-serif;
     color: #fff7dc
 }
 
@@ -274,7 +274,7 @@ a {
 /* Katie + Joey */
 
 .mascot-katie {
-    width: 70%;
+    width: 60%;
 
     left: 50%;
     bottom: 64px;
@@ -287,7 +287,7 @@ a {
 /* Philippe */
 
 .mascot-philippe {
-    width: 70%;
+    width: 60%;
 
     left: 50%;
     bottom: 80px;
@@ -311,7 +311,7 @@ a {
 /* Lilypad */
 
 .mascot-lilypad {
-    width: 75%;
+    width: 65%;
 
     left: 50%;
     bottom: 78px;
@@ -326,7 +326,7 @@ a {
     width: 92%;
 
     left: 52%;
-    bottom: 88px;
+    bottom: 58px;
 
     transform: translateX(-50%);
 }
@@ -1019,3 +1019,475 @@ a {
     bottom: -35px;
 }
 
+/* =========================================================
+   MASCOT FULL-SCREEN PROFILE
+   ========================================================= */
+
+.mascot-profile-page {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 90px 24px 45px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mascot-profile-card {
+    width: min(88vw, 1300px);
+
+    margin: 25px auto 0;
+}
+
+.mascot-profile-card img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.mascot-category-button {
+    position: absolute;
+
+    top: 85px;
+    left: 24px;
+
+    z-index: 10;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 10px 16px;
+
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(8px);
+
+    border: 2px solid rgba(255, 255, 255, 0.95);
+    border-radius: 999px;
+
+    color: #17351f;
+
+    font-size: 14px;
+    font-weight: 900;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.14);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.mascot-category-button:hover {
+    background: rgba(255, 255, 255, 0.96);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.18);
+}
+/* =========================================================
+   MEET THE TEAM HOMEPAGE
+   ========================================================= */
+
+.team-home {
+    min-height: 100vh;
+
+    padding: 75px 38px 70px;
+
+    background:
+        linear-gradient(
+            rgba(255, 253, 240, 0.30),
+            rgba(236, 248, 226, 0.40)
+        ),
+        url("../images/backgrounds/home-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* ---------- Team Hero ---------- */
+
+.team-hero {
+    max-width: 850px;
+
+    margin: 0 auto 34px;
+    padding: 28px 34px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.84);
+    backdrop-filter: blur(8px);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 8px 24px rgba(40, 70, 45, 0.12);
+}
+
+.team-eyebrow {
+    margin: 0 0 5px;
+
+    color: #f05a17;
+
+    font-size: 14px;
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+.team-hero h1 {
+    margin: 0;
+
+    color: #17652f;
+
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 900;
+
+    line-height: 1;
+}
+
+.team-intro {
+    max-width: 650px;
+
+    margin: 15px auto 17px;
+
+    color: #263e50;
+
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.browse-categories-link {
+    color: #f05a17;
+
+    font-weight: 900;
+    font-size: 15px;
+}
+
+
+/* ---------- Team Grid ---------- */
+
+.team-grid {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+/* ---------- Team Card ---------- */
+
+.team-card {
+    position: relative;
+
+    min-height: 285px;
+
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+
+    overflow: hidden;
+
+    padding: 25px;
+
+    border-radius: 28px;
+
+    color: #17351f;
+
+    box-shadow:
+        0 8px 22px rgba(45, 65, 45, 0.16);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 14px 28px rgba(45, 65, 45, 0.22);
+}
+
+.team-card-copy {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team-category {
+    font-size: 13px;
+    font-weight: 900;
+
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.team-card h2 {
+    margin: 5px 0 7px;
+
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.team-card-copy > p {
+    margin: 0 0 14px;
+
+    color: #314a45;
+
+    font-size: 15px;
+    line-height: 1.45;
+    font-weight: 700;
+}
+
+.team-card strong {
+    margin-top: 14px;
+
+    font-size: 14px;
+}
+
+
+/* ---------- Mascot ---------- */
+
+.team-card > img {
+    position: absolute;
+
+    right: -5px;
+    bottom: -18px;
+
+    width: 43%;
+    height: 92%;
+
+    object-fit: contain;
+    object-position: bottom right;
+
+    z-index: 1;
+}
+
+
+/* ---------- Trait Chips ---------- */
+
+.team-traits {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+.team-traits span {
+    padding: 6px 9px;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* ---------- Mascot Theme Colors ---------- */
+
+.team-mammals {
+    background: linear-gradient(135deg, #fff1c5, #f8d99a);
+}
+
+.team-birds {
+    background: linear-gradient(135deg, #e2f4ff, #bfe6ff);
+}
+
+.team-reptiles {
+    background: linear-gradient(135deg, #e9f5ce, #cce8a8);
+}
+
+.team-amphibians {
+    background: linear-gradient(135deg, #f4e5ff, #e8caf8);
+}
+
+.team-fish {
+    background: linear-gradient(135deg, #daf6ff, #beeafa);
+}
+
+.team-arthropods {
+    background: linear-gradient(135deg, #ffe5ed, #ffcbdc);
+}
+
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 850px) {
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card {
+        min-height: 260px;
+    }
+}
+
+/* =========================================================
+   TEAM PAGE TYPOGRAPHY
+   Match mascot profile card style
+   ========================================================= */
+
+.team-home,
+.team-home a {
+    font-family: "Nunito", "Arial Rounded MT Bold", sans-serif;
+}
+
+
+/* Main Team Heading */
+.team-hero h1 {
+    color: #17652f;
+
+    /* Updated to Fredoka for the soft, bubbly cartoon look */
+    font-family: 'Fredoka', 'Arial Rounded MT Bold', sans-serif;
+
+    font-size: clamp(52px, 6vw, 78px);
+    font-weight: 700; /* Fredoka's max weight is super bold */
+
+    line-height: 0.95;
+    letter-spacing: -1px; /* Slightly relaxed tight tracking */
+
+    text-shadow: 0 2px 0 rgba(255, 255, 255, 0.65);
+}
+
+
+/* Small orange intro label */
+
+.team-eyebrow {
+    color: #f05a17;
+
+    font-size: 15px;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+/* Intro body text */
+
+.team-intro {
+    color: #18316d;
+
+    /* Nunito provides the soft, rounded body text look */
+    font-family: "Nunito", "Arial Rounded MT Bold", sans-serif;
+
+    font-size: 18px;
+    font-weight: 800; /* Use 800 or 700 for a solid, friendly weight */
+    line-height: 1.45;
+    letter-spacing: -0.2px;
+}
+
+
+
+/* Character Names */
+.team-card h2 {
+    margin: 5px 0 8px;
+
+    /* Fredoka provides the bubbly, high-impact cartoon look */
+    font-family: "Fredoka", "Arial Rounded MT Bold", sans-serif;
+
+    font-size: 34px;
+    font-weight: 700; /* Fredoka 700 is ultra-bold and rounded */
+
+    line-height: 1;
+    letter-spacing: -0.5px;
+}
+
+
+/* Personality Description */
+
+.team-card-copy > p {
+    color: #18316d;
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+
+/* Category / Guide label */
+
+.team-category {
+     color: #18316d;
+
+    /* Nunito provides the soft, rounded body text look */
+    font-family: "Nunito", "Arial Rounded MT Bold", sans-serif;
+
+    font-size: 18px;
+    font-weight: 800; /* Use 800 or 700 for a solid, friendly weight */
+    line-height: 1.45;
+    letter-spacing: -0.2px;
+}
+
+
+/* "Meet Cora →" */
+
+.team-card strong {
+    font-family: 'Fredoka', 'Arial Rounded MT Bold', sans-serif;
+
+    font-size: 15px;
+    font-weight: 700; /* Fredoka's max weight is 700 and gives an ultra-bold look */
+    line-height: 1.2;
+    letter-spacing: -0.2px;
+}
+.team-mammals h2,
+.team-mammals .team-category,
+.team-mammals strong {
+    color: #b94713;
+}
+
+.team-birds h2,
+.team-birds .team-category,
+.team-birds strong {
+    color: #1559c7;
+}
+
+.team-reptiles h2,
+.team-reptiles .team-category,
+.team-reptiles strong {
+    color: #176b27;
+}
+
+.team-amphibians h2,
+.team-amphibians .team-category,
+.team-amphibians strong {
+    color: #7223b5;
+}
+
+.team-fish h2,
+.team-fish .team-category,
+.team-fish strong {
+    color: #1267cf;
+}
+
+.team-arthropods h2,
+.team-arthropods .team-category,
+.team-arthropods strong {
+    color: #c71950;
+}

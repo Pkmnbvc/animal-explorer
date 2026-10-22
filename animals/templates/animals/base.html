@@ -9,6 +9,13 @@
     <title>{% block title %}Animal Explorer{% endblock %}</title>
 
     <link rel="stylesheet" href="{% static 'animals/css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -24,7 +31,7 @@
 
 <div class="nav-links">
     <a href="/animals/">Home</a>
-    <a href="/animals/#categories">Categories</a>
+    <a href="{% url 'categories' %}">Categories</a>
     <a href="/animals/#about">About</a>
 </div>
 <form class="search-box"
