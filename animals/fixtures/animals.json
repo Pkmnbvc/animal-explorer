@@ -50,7 +50,7 @@
     "category": "Amphibian",
     "diet": "Carnivore",
     "habitat": "Grasslands, forests, wetlands, and gardens",
-    "lifespan": "10 â€“ 15 years",
+    "lifespan": "10 – 15 years",
     "fun_fact": "Cane toads are some of the largest toads in the world and can grow about as big as a dinner plate! They also have special glands behind their eyes that help protect them from predators.",
     "image": "animal_images/cane_toad_aGJc6Rs.jpg"
   }
@@ -65,7 +65,7 @@
     "diet": "Omnivore",
     "habitat": "Tropical coral reefs",
     "lifespan": "2-3 years",
-    "fun_fact": "Why Arthropod? Because shrimp are crustaceans, and crustaceans belong to the arthropod group! Guess what? A shrimpâ€™s heart is in its head area! Thatâ€™s because its head and chest are joined together.",
+    "fun_fact": "Why Arthropod? Because shrimp are crustaceans, and crustaceans belong to the arthropod group! Guess what? A shrimp’s heart is in its head area! That’s because its head and chest are joined together.",
     "image": "animal_images/shrimp_mwXlAzC.jpg"
   }
 },
@@ -95,6 +95,104 @@
     "lifespan": "8-15 years",
     "fun_fact": "When a red kangaroo joey is born, it is blind, hairless, and roughly the size of a jellybean or grape!",
     "image": "animal_images/new_kangaroo_qKvA4xV.jpg"
+  }
+},
+{
+  "model": "animals.animal",
+  "pk": 8,
+  "fields": {
+    "name": "Axolotl",
+    "scientific_name": "Ambystoma mexicanum",
+    "category": "Amphibian",
+    "diet": "Carnivore",
+    "habitat": "Freshwater lakes and canals in Xochimilco, Mexico",
+    "lifespan": "10-15 years",
+    "fun_fact": "Axolotls look like they're smiling, but their real superpower is even cooler! They can regrow lost legs and keep their fluffy-looking gills their entire lives!",
+    "image": "animal_images/axolotl_Y0WUb2J.jpg"
+  }
+},
+{
+  "model": "animals.animal",
+  "pk": 9,
+  "fields": {
+    "name": "Green sea turtle",
+    "scientific_name": "Chelonia mydas",
+    "category": "Reptile",
+    "diet": "Herbivore",
+    "habitat": "Warm tropical and subtropical oceans worldwide",
+    "lifespan": "80-100 years",
+    "fun_fact": "Green sea turtles can sleep underwater for up to seven hours at a time without coming up for air!",
+    "image": "animal_images/seaturtle_EaLhGou.jpg"
+  }
+},
+{
+  "model": "animals.animal",
+  "pk": 10,
+  "fields": {
+    "name": "Pufferfish",
+    "scientific_name": "Tetraodontidae",
+    "category": "Fish",
+    "diet": "Carnivore",
+    "habitat": "tropical and subtropical marine waters, with some species inhabiting brackish and freshwater",
+    "lifespan": "3-20 years",
+    "fun_fact": "A tiny male pufferfish spends a whole week flapping his fins to draw giant, seashell-decorated sand circles on the ocean floor to impress a mate!",
+    "image": "animal_images/puffer_main_KjATLKi.jpg.webp"
+  }
+},
+{
+  "model": "animals.animal",
+  "pk": 11,
+  "fields": {
+    "name": "Monarch butterfly",
+    "scientific_name": "Danaus plexippus",
+    "category": "Arthropod",
+    "diet": "Herbivore",
+    "habitat": "sunny fields and gardens with milkweed in the summer, and coastal or mountain forests in the winter.",
+    "lifespan": "2 weeks and 10 months",
+    "fun_fact": "Monarch butterflies taste with their feet using special sensors that help them find sweet nectar and the right milkweed leaves to lay their eggs on",
+    "image": "animal_images/180830-PSV-Butterfly-House-200_KBip1OV.webp"
+  }
+},
+{
+  "model": "animals.animal",
+  "pk": 12,
+  "fields": {
+    "name": "Vampire Bat",
+    "scientific_name": "Desmodontinae",
+    "category": "Mammal",
+    "diet": "Carnivore",
+    "habitat": "Americas, ranging from northern Mexico through Central America and down into South America",
+    "lifespan": "9-20 years",
+    "fun_fact": "Their diet consists 100% of liquid blood!",
+    "image": "animal_images/desmodus-rotundus-mbf-1912-for-nancy_AeHaIZ4.webp"
+  }
+},
+{
+  "model": "animals.animal",
+  "pk": 13,
+  "fields": {
+    "name": "Great horned owl",
+    "scientific_name": "Bubo virginianus",
+    "category": "Bird",
+    "diet": "Carnivore",
+    "habitat": "Arctic down to South America, thriving in forests, deserts, prairies, mountains",
+    "lifespan": "5-25 years",
+    "fun_fact": "One of the most surprising facts about the Great Horned Owl is that it regularly hunts and eats skunks. Because these owls have virtually no sense of smell, a skunk's smelly spray does not bother them at all!",
+    "image": "animal_images/GreatHornedOwl1_4x3_DDBod0O.avif"
+  }
+},
+{
+  "model": "animals.animal",
+  "pk": 14,
+  "fields": {
+    "name": "Grey Wolf",
+    "scientific_name": "Canis lupus",
+    "category": "Mammal",
+    "diet": "Carnivore",
+    "habitat": "forests, mountains, tundra, taiga, and grasslands across North America, Europe, and Asia",
+    "lifespan": "6-15 years",
+    "fun_fact": "Every wolf has a completely unique howl! Much like a human fingerprint—which allows pack members to identify each other from miles away!",
+    "image": "animal_images/gray-wolf-closeup_4x3_Tdpcn5c.avif"
   }
 }
 ]
